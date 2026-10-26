@@ -1,2 +1,18 @@
-public class Tenth_Task {
+import java.util.Scanner;
+public class Tenth_Task{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int count=0;
+
+        for(int i=1; i*i<=x; i++){
+            if(x%i==0) {
+                count++;
+                if(i!=x/i){
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+    }
 }
